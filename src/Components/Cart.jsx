@@ -22,7 +22,7 @@ const Cart = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                     <table class="table">
+                     <table className="table">
                         <thead>
                             <tr>
                             <th scope="col"></th>

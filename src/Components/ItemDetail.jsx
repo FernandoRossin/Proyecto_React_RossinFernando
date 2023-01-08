@@ -17,7 +17,7 @@ const ItemDetail = ({item}) => {
     
     useEffect(()=>{
         setItemStock(item.stock);
-    },[item])
+    },[item]);
 
 
     return(
