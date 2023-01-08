@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
         const promesa = new Promise ((resolve, reject) => {
             setTimeout(() => {
                 resolve(arrayProductos.find(item => item.id === parseInt(id)));
-            }, 2000);
+            }, 500);
         });
         promesa.then((data) => {
             setItem(data);
