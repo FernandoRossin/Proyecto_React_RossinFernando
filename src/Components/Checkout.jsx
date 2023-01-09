@@ -1,6 +1,7 @@
 import { addDoc, getFirestore, collection, updateDoc, doc } from "firebase/firestore";
 import React, { useContext } from "react";
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { CartContext } from "./context/CartContext";
 
 
@@ -76,7 +77,7 @@ const Checkout = () => {
             </div>
             <div className="row">
                 <div className="col text-center">
-                    {orderId !== "" ? <div className="alert alert-secondary" role="alert">Se generó la orden = {orderId}</div> : ""}
+                    {orderId !== "" ? <Navigate to={"/thankyou/" + orderId} /> : ""}
                 </div>
             </div>
         </div>
