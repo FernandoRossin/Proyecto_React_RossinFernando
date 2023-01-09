@@ -34,8 +34,8 @@ const ItemListContainer = () =>{
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection(db,"Productos");
-        const q = id ? query(itemsCollection,where('categoria','==',id)) : itemsCollection;
-        
+        const q = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
+
         getDocs(q).then((snapShot) => {
             setItems(snapShot.docs.map((doc) => 
                ({id:doc.id, ...doc.data()})
